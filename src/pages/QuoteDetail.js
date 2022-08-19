@@ -5,8 +5,8 @@ import HighlightedQuote from "../components/quotes/HighlightedQuote";
 import Comments from "../components/comments/Comments";
 
 const DUMMY_QUOTES = [
-  { id: "q1", author: "Max", text: "Learnign React is fun!" },
-  { id: "q2", author: "Maximilian", text: "Learnign React is great!" },
+  { id: "q1", author: "Max", text: "Learning React is fun!" },
+  { id: "q2", author: "Maximilian", text: "Learning React is great!" },
 ];
 
 const QuoteDetail = () => {
