@@ -1,5 +1,4 @@
 import { useRef, useEffect } from "react";
-import { useParams } from "react-router-dom";
 
 import useHttp from "../../hooks/use-http";
 import { addComment } from "../../lib/api";
@@ -8,7 +7,6 @@ import classes from "./NewCommentForm.module.css";
 
 const NewCommentForm = (props) => {
   const commentTextRef = useRef();
-  useParams();
 
   const { sendRequest, status, error } = useHttp(addComment);
 
@@ -27,7 +25,7 @@ const NewCommentForm = (props) => {
 
     // optional: Could validate here
 
-    sendRequest({ text: enteredText });
+    sendRequest({ text: enteredText }, props.quoteId);
   };
 
   return (
